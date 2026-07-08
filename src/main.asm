@@ -17,9 +17,7 @@ org 0x7C00
 bits 16
 
 
-
 %define ENDL 0x0D, 0x0A
-
 
 
 start:
@@ -55,7 +53,6 @@ puts:
 	ret
 
 
-
 main:
 	
 	; setup data segments
@@ -71,12 +68,10 @@ main:
 	mov si, msg_hello
 	call puts
 
-
 	hlt
 
 .halt:
 	jmp .halt
-
 
 
 msg_hello: db 'Hello world!', ENDL, 0

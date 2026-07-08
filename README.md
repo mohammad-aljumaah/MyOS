@@ -1,13 +1,32 @@
 # MyOS
 
-Author: Mohammad Aljumaah.
-
-
 A hobby operating system built from scratch in x86 assembly.
 
-## Current status
-- Stage-1 boot sector: prints "Hello world!" via BIOS int 0x10
+## Author
 
-## Build & run
-Requires: nasm, make, qemu-system-i386
+**Mohammad Aljumaah**
 
+[Website](https://mohammad-aljumaah.me)
+
+## Build & Run
+
+Note: Requires `nasm`, `make`, `qemu-system-i386`.
+
+### Build
+
+```bash
+make
+```
+
+### Run
+
+```bash
+make run
+```
+
+### Clean
+
+```bash
+make clean
+```
+> Removes build/

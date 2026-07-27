@@ -1,0 +1,4 @@
+/home/mja09/watcom/lh/sys/types.h(34): Error! E1091: unknown platform
+/home/mja09/watcom/lh/sys/types.h(198): Error! E1055: Unable to open 'arch//sys/types.h'
+/home/mja09/watcom/lh/sys/types.h(199): Error! E1055: Unable to open 'arch//sys/sysmacros.h'
+main.c(5): Warning! W303: Parameter 'bootDrive' has been defined, but not referenced

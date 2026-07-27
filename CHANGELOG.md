@@ -2,6 +2,32 @@
 
 All notable changes to MyOS will be documented in this file.
 
+
+## [0.4.0] - 2026-07-21
+### Added
+- Two-stage bootloader: stage 1 loads stage 2 from disk
+- Stage 2 entry stub (16-bit asm): sets up stack, calls into C
+- First C kernel code — `cstart_` prints via `puts`
+- Minimal freestanding headers (stdint.h, stdio.h)
+- FAT12 reader prototype in C (tools/) for testing image parsing
+- Open Watcom 16-bit toolchain integration (wcc, wlink)
+- Linker script: raw binary output, custom entry point, _ENTRY first
+### Changed
+- Kernel now written in C instead of pure assembly
+- Makefile: compiles C with Open Watcom, links with wlink
+
+## [0.3.0] - 2026-07-XX
+### Added
+- FAT12 filesystem parsing in the bootloader
+- Reads BIOS drive parameters (int 13h, ah=08h) instead of trusting formatted values
+- Computes root directory location and size from the BPB
+- Searches root directory for KERNEL.BIN (repe cmpsb over directory entries)
+- Follows the FAT cluster chain to load the kernel (12-bit entry decoding)
+- FAT12 reader prototype in C (tools/) to validate the parsing logic
+- Loads kernel to 0x2000:0 and jumps to it
+### Changed
+- Bootloader now locates the kernel as a named file rather than a fixed sector
+
 ## [0.2.0] - 2026-07-09
 ### Added
 - FAT12 filesystem header (BPB + EBR) in boot sector

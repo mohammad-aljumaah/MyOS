@@ -1,0 +1,3 @@
+stdio.c(227): Warning! W131: No prototype found for function 'x86_div64_32'
+stdio.c(227): Warning! W308: The function 'x86_div64_32' without prototyped parameters called
+stdio.c(227): Note! I2002: 'x86_div64_32' defined in: stdio.c(227)
